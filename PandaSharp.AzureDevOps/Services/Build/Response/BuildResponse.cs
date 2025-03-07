@@ -49,6 +49,9 @@ namespace PandaSharp.AzureDevOps.Services.Build.Response
         [JsonProperty("sourceVersion")]
         public string SourceVersion { get; set; }
 
+        [JsonProperty("tags")]
+        public string[] Tags { get; set; }
+
         [JsonProperty("url")]
         public string Url { get; set; }
 
