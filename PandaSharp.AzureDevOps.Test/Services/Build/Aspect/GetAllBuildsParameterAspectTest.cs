@@ -30,7 +30,7 @@ namespace PandaSharp.AzureDevOps.Test.Services.Build.Aspect
             var request = new RestRequest();
 
             var aspect = new GetAllBuildsParameterAspect();
-            aspect.SetBuildIdsFilter(new[] { 1, 2, 3 });
+            aspect.SetBuildIdsFilter([1, 2, 3]);
             aspect.ApplyToRestRequest(request);
 
             request.Parameters.Count.ShouldBe(1);
@@ -56,7 +56,7 @@ namespace PandaSharp.AzureDevOps.Test.Services.Build.Aspect
             var request = new RestRequest();
 
             var aspect = new GetAllBuildsParameterAspect();
-            aspect.SetDefinitionIdsFilter(new[] { 1, 2, 3 });
+            aspect.SetDefinitionIdsFilter([1, 2, 3]);
             aspect.ApplyToRestRequest(request);
 
             request.Parameters.Count.ShouldBe(1);
@@ -173,7 +173,7 @@ namespace PandaSharp.AzureDevOps.Test.Services.Build.Aspect
             var request = new RestRequest();
 
             var aspect = new GetAllBuildsParameterAspect();
-            aspect.SetPropertiesFilter(new[] { "Heinz", "Wurst" });
+            aspect.SetPropertiesFilter(["Heinz", "Wurst"]);
             aspect.ApplyToRestRequest(request);
 
             request.Parameters.Count.ShouldBe(1);
@@ -186,7 +186,7 @@ namespace PandaSharp.AzureDevOps.Test.Services.Build.Aspect
             var request = new RestRequest();
 
             var aspect = new GetAllBuildsParameterAspect();
-            aspect.SetQueueIdsFilter(new[] { 1, 2, 3 });
+            aspect.SetQueueIdsFilter([1, 2, 3]);
             aspect.ApplyToRestRequest(request);
 
             request.Parameters.Count.ShouldBe(1);
@@ -225,7 +225,7 @@ namespace PandaSharp.AzureDevOps.Test.Services.Build.Aspect
             var request = new RestRequest();
 
             var aspect = new GetAllBuildsParameterAspect();
-            aspect.SetTagsFilter(new[] { "tag1", "tag2" });
+            aspect.SetTagsFilter(["tag1", "tag2"]);
             aspect.ApplyToRestRequest(request);
 
             request.Parameters.Count.ShouldBe(1);
